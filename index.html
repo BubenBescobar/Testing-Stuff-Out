@@ -2,6 +2,12 @@
 <html>
   <body>
     <h3>Testing Stuff Out</h3>
+    <h3>Where to Start?</h3>
+    <input type="text" id="start">
+    <button onclick="myLoop()">Start the Loop</button><br />
+    <h3>Where to End?</h3>
+    <input type="text" id="end" />
+    <button onclick="myLoop()">Start the Loop</button>
     <script>
       var beginning = 10;
       var limit = 27;
@@ -15,6 +21,16 @@
         while(beginning < limit ){
         document.write (" Maf " + Math.floor(Math.random() * 100) + "<br />");
         beginning ++;
+        }
+      }
+      function myLoop(){
+        var start = document.getElementById("start").value;
+
+        var end = document.getElementById("end").value;
+
+
+        for(var i = start ; i <= end ; i++){
+          document.write("<p>" + i )
         }
       }
     </script>
